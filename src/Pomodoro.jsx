@@ -43,6 +43,7 @@ function PomodoroTimer() {
 
   return (
     <div className={`timer ${isBreak ? 'break' : 'work'}`}>
+      <div className="heading"><span>Pomodoro Timer !</span></div>
       <div className="time">{formatTime(time)}</div>
       <div className="buttons">
         <button onClick={toggleTimer}>{isActive ? 'Pause' : 'Start'}</button>

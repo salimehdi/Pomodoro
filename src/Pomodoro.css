@@ -13,6 +13,38 @@
   font-family: Arial, sans-serif;
   background-color: #fff;
   transition: background-color 0.3s ease-in-out;
+  position: relative;
+}
+.heading{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0px;
+  background-image: linear-gradient(
+    to bottom,
+    #dbf8de,
+    #f9e2e2
+  );
+  height: 100svh;
+  width: 50px;
+  >span{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: transparent; /* Set the text color to transparent */
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* For webkit browsers */
+    background-image: linear-gradient(
+      to right,
+      #1515ff,
+      #88078d
+    ); /* Match the background color */
+    font-weight: 700;
+    writing-mode: vertical-rl;
+
+  }
 }
 .break:before {
   content: "Break";
@@ -26,14 +58,14 @@
   -webkit-background-clip: text; /* For webkit browsers */
   background-image: linear-gradient(
     to right,
-    #11ef11,
-    #0914e7
+    #0ff10f,
+    #0cf8c1
   ); /* Match the background color */
   font-weight: 900;
 }
 .work:before {
   content: "Work";
-  color: white;
+  
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -43,8 +75,8 @@
   -webkit-background-clip: text; /* For webkit browsers */
   background-image: linear-gradient(
     to right,
-    #c6ef11,
-    #09e7be
+    #f94747,
+    #fdb807
   ); /* Match the background color */
   font-weight: 900;
 }
