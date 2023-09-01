@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100svh;
   font-family: Arial, sans-serif;
   background-color: #fff;
   transition: background-color 0.3s ease-in-out;
@@ -27,7 +27,7 @@
     #dbf8de,
     #f9e2e2
   );
-  height: 100svh;
+  height: 100%;
   width: 50px;
   >span{
     font-size: 1.5rem;
