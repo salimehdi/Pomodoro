@@ -1,0 +1,82 @@
+/* PomodoroTimer.css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+.break:before {
+  content: "Break";
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+  color: transparent; /* Set the text color to transparent */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For webkit browsers */
+  background-image: linear-gradient(
+    to right,
+    #11ef11,
+    #0914e7
+  ); /* Match the background color */
+  font-weight: 900;
+}
+.work:before {
+  content: "Work";
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+  color: transparent; /* Set the text color to transparent */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For webkit browsers */
+  background-image: linear-gradient(
+    to right,
+    #c6ef11,
+    #09e7be
+  ); /* Match the background color */
+  font-weight: 900;
+}
+.timer.work {
+  background-color: #4caf50; /* Green for work sessions */
+}
+
+.timer.break {
+  background-color: #f44336; /* Red for breaks */
+}
+
+.time {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
