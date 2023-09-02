@@ -91,10 +91,11 @@
 .time {
   font-size: 3rem;
   color: #fff;
+  margin-bottom: 15px;
 }
 
 .buttons {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 button {

@@ -41,6 +41,11 @@ function PomodoroTimer() {
     setTime(1500);
   };
 
+  const toggleMode = () => {
+    (isBreak) ? setTime(1500) : setTime(300);
+    setIsBreak(!isBreak);
+  };
+
   return (
     <div className={`timer ${isBreak ? 'break' : 'work'}`}>
       <div className="heading"><span>Pomodoro Timer !</span></div>
@@ -48,6 +53,13 @@ function PomodoroTimer() {
       <div className="buttons">
         <button onClick={toggleTimer}>{isActive ? 'Pause' : 'Start'}</button>
         <button onClick={resetTimer}>Reset</button>
+      </div>
+      <div className="buttons">
+        <button onClick={toggleMode} >Skip {isBreak ? 'Break' : 'Work'}</button>
+        {
+          (isActive) &&
+              <button onClick={()=>{setTime(time + 60)}} >+1</button>
+        }
       </div>
     </div>
   );
