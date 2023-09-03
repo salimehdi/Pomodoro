@@ -24,9 +24,10 @@
   left: 0px;
   background-image: linear-gradient(
     to bottom,
-    #dbf8de,
-    #f9e2e2
+    #002004,
+    #230000
   );
+  border-radius: 0 20px 20px 0 ;
   height: 100%;
   width: 50px;
   >span{
@@ -37,9 +38,9 @@
     background-clip: text; /* Clip the background to the text */
     -webkit-background-clip: text; /* For webkit browsers */
     background-image: linear-gradient(
-      to right,
-      #1515ff,
-      #88078d
+      to bottom,
+      #c4f8e9,
+      #66e8ff
     ); /* Match the background color */
     font-weight: 700;
     writing-mode: vertical-rl;
