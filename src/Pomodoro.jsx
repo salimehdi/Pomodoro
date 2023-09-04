@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import {FaRegSun} from "react-icons/fa";
 import "./Pomodoro.css";
-function PomodoroTimer() {
-  const [time, setTime] = useState(1500); // 25 minutes in seconds
+function PomodoroTimer({workTime,breakTime}) {
+  const [time, setTime] = useState(workTime); 
   const [isActive, setIsActive] = useState(false);
   const [isBreak, setIsBreak] = useState(false);
 
@@ -14,10 +15,10 @@ function PomodoroTimer() {
       }, 1000);
     } else if (time === 0 && !isBreak) {
       setIsBreak(true);
-      setTime(300); // 5 minutes break in seconds
+      setTime(breakTime); 
     } else if (time === 0 && isBreak) {
       setIsBreak(false);
-      setTime(1500); // 25 minutes work time in seconds
+      setTime(workTime); 
     } else {
       clearInterval(interval);
     }
@@ -40,19 +41,17 @@ function PomodoroTimer() {
   const resetTimer = () => {
     setIsActive(false);
     setIsBreak(false);
-    setTime(1500);
+    setTime(workTime);
   };
 
   const toggleMode = () => {
     setIsBreak(!isBreak); //react scheduling a state update
-    isBreak ? setTime(1500) : setTime(300); //I have set the time oppositly because the react schedules a state update and it does not update the state immediately, so I have set the time oppositly so that it will update the time correctly
-    // or I can also use
-    //(!isBreak) ? setTime(300) : setTime(1500);
+    !isBreak ? setTime(breakTime) : setTime(workTime); // since isBreak is not updated yet, we use the opposite value to schedule the time state update
   };
 
   return (
     <div className={`timer ${isBreak ? "break" : "work"}`}>
-      <div className="heading"> <span>Pomodoro Timer !</span> </div>
+      
       <div className="time">{formatTime(time)}</div>
       <div className="buttons">
         <button onClick={toggleTimer}>{isActive ? "Pause" : "Start"}</button>

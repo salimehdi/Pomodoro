@@ -1,4 +1,7 @@
 /* PomodoroTimer.css */
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Dosis:wght@200;300;400;500;600;700;800&family=Nanum+Gothic+Coding:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -15,38 +18,7 @@
   transition: background-color 0.3s ease-in-out;
   position: relative;
 }
-.heading{
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 0px;
-  background-image: linear-gradient(
-    to bottom,
-    #002004,
-    #230000
-  );
-  border-radius: 0 20px 20px 0 ;
-  height: 100%;
-  width: 50px;
-  >span{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: transparent; /* Set the text color to transparent */
-    background-clip: text; /* Clip the background to the text */
-    -webkit-background-clip: text; /* For webkit browsers */
-    background-image: linear-gradient(
-      to bottom,
-      #c4f8e9,
-      #66e8ff
-    ); /* Match the background color */
-    font-weight: 700;
-    writing-mode: vertical-rl;
 
-  }
-}
 .break:before {
   content: "Break";
   color: white;
@@ -54,45 +26,54 @@
   text-transform: uppercase;
   letter-spacing: 6px;
   margin-bottom: 20px;
-  color: transparent; /* Set the text color to transparent */
-  background-clip: text; /* Clip the background to the text */
-  -webkit-background-clip: text; /* For webkit browsers */
-  background-image: linear-gradient(
-    to right,
-    #0ff10f,
-    #0cf8c1
-  ); /* Match the background color */
+  color: transparent;
+  /* Set the text color to transparent */
+  background-clip: text;
+  /* Clip the background to the text */
+  -webkit-background-clip: text;
+  /* For webkit browsers */
+  background-image: linear-gradient(to right,
+      #0ff10f,
+      #0cf8c1);
+  /* Match the background color */
   font-weight: 900;
 }
+
 .work:before {
   content: "Work";
-  
+
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 6px;
   margin-bottom: 20px;
-  color: transparent; /* Set the text color to transparent */
-  background-clip: text; /* Clip the background to the text */
-  -webkit-background-clip: text; /* For webkit browsers */
-  background-image: linear-gradient(
-    to right,
-    #f94747,
-    #fdb807
-  ); /* Match the background color */
+  color: transparent;
+  /* Set the text color to transparent */
+  background-clip: text;
+  /* Clip the background to the text */
+  -webkit-background-clip: text;
+  /* For webkit browsers */
+  background-image: linear-gradient(to right,
+      #ff0000,
+      #0008ff);
+  /* Match the background color */
   font-weight: 900;
 }
+
 .timer.work {
-  background-color: #4caf50; /* Green for work sessions */
+  background-color: #4caf50;
+  /* Green for work sessions */
 }
 
 .timer.break {
-  background-color: #f44336; /* Red for breaks */
+  background-color: #f44336;
+  /* Red for breaks */
 }
 
 .time {
   font-size: 3rem;
-  color: #fff;
+  color: rgb(255, 255, 255);
   margin-bottom: 15px;
+  font-family: Unbounded, sans-serif;
 }
 
 .buttons {
@@ -113,4 +94,42 @@ button {
 
 button:hover {
   background-color: #0d47a1;
+}
+
+/* For Setting.jsx */
+
+.settingPage {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #11c18f;
+  transition: background-color 0.3s ease-in-out;
+  position: relative;
+
+  >label {
+    margin: 10px 0;
+    
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #00271c;
+
+    >input {
+      border: none;
+      height: 30px;
+      width: 40px;
+      border-radius: 3px;
+      text-align: center;
+      color: #002118;
+    }
+  }
 }
