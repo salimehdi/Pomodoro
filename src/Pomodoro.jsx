@@ -5,10 +5,12 @@ function PomodoroTimer({workTime,breakTime}) {
   const [time, setTime] = useState(workTime); 
   const [isActive, setIsActive] = useState(false);
   const [isBreak, setIsBreak] = useState(false);
+  const start = new Audio('/assets/start.wav');
+  const stop = new Audio('/assets/stop.wav');
+
 
   useEffect(() => {
     let interval;
-
     if (isActive && time > 0) {
       interval = setInterval(() => {
         setTime((prevTime) => prevTime - 1);
@@ -16,9 +18,11 @@ function PomodoroTimer({workTime,breakTime}) {
     } else if (time === 0 && !isBreak) {
       setIsBreak(true);
       setTime(breakTime); 
+      stop.play();
     } else if (time === 0 && isBreak) {
       setIsBreak(false);
       setTime(workTime); 
+      start.play();
     } else {
       clearInterval(interval);
     }

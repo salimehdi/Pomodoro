@@ -1,7 +1,7 @@
-import PomodoroTimer from './Pomodoro'
+import PomodoroTimer from "./Pomodoro"
 import {FaRegSun} from "react-icons/fa";
-import Setting from './Setting'
-import {useState} from 'react'
+import Setting from "./Setting"
+import {useState} from "react"
 import "./App.css";
 function App() {
 const [showSetting,setShowSetting] = useState(false);
